@@ -5,12 +5,12 @@ app = fl.Flask(__name__)
 
 @app.route("/")
 def home():
-    return fl.render_template("home.html")
+    return fl.render_template("assign_home.html")
 
 
 @app.route("/login")
 def login():
-    return fl.render_template("login.html")
+    return fl.render_template("assign_home.html")
 
 
 if __name__ == "__main__":
