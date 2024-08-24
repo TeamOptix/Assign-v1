@@ -10,7 +10,7 @@ def home():
 
 @app.route("/login")
 def login():
-    return fl.render_template("assign_home.html")
+    return fl.render_template("assign_login.html")
 
 
 if __name__ == "__main__":
