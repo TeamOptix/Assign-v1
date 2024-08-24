@@ -1,0 +1,25 @@
+{
+  "name": "assign-v1-server",
+  "version": "1.0.0",
+  "description": "Server for Project Assign",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamOptix/Assign-v1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeamOptix/Assign-v1/issues"
+  },
+  "homepage": "https://github.com/TeamOptix/Assign-v1#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security"
+  }
+}
