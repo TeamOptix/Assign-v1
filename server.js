@@ -9,11 +9,11 @@ app.use(express.static('static'));
 let day;
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/templates/home.html');
+    res.sendFile(__dirname + '/templates/assign_home.html');
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/templates/login.html');
+    res.sendFile(__dirname + '/templates/assign_login.html');
 });
 
 app.get('/teachers/:name', (req, res) => {
