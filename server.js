@@ -8,6 +8,12 @@ const nunjucks = require('nunjucks');
 
 const env = new nunjucks.Environment();
 
+const dt = new Date();
+const full_date = (dt.getDate() + '-' + (dt.getMonth() + 1) + '-' + dt.getFullYear()).toString();
+
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+let day = days[dt.getDay() - 1];
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('static'));
 var accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs/logs.log'), { flags: 'a' })
@@ -17,8 +23,6 @@ nunjucks.configure('templates', {
     autoescape: true,
     express: app
 });
-
-let day;
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/templates/assign_home.html');
