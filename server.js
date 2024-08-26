@@ -2,9 +2,21 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const fs = require('fs');
+const path = require('path');
+const morgan = require('morgan');
+const nunjucks = require('nunjucks');
+
+const env = new nunjucks.Environment();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('static'));
+var accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs/logs.log'), { flags: 'a' })
+app.use(morgan("[:date[web]]    :    :method  |  ':url'  |   HTTP/:http-version   |  Code :status  |  :response-time ms", { stream: accessLogStream }))
+app.use(express.json())
+nunjucks.configure('templates', {
+    autoescape: true,
+    express: app
+});
 
 let day;
 
@@ -21,8 +33,10 @@ app.get('/teachers/:name', (req, res) => {
     console.log(req.params.name);
 
     let loc_def = __dirname + '/database/default/' + req.params.name + '/tt.json';
-    const tt_def = JSON.parse(fs.readFileSync(loc_def));
+    const tt_def = (JSON.parse(fs.readFileSync(loc_def))).monday;
     console.log(tt_def);
+
+    // res.render('')
 });
 
 app.post('/login', (req, res) => {
