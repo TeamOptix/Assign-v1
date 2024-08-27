@@ -1,0 +1,77 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+ 
+    font-family: Tahoma, sans-serif;
+    }
+
+#title{
+    
+    font-size: 50px;
+    color: #eeff00;
+    font-family: Tahoma, sans-serif;
+    font-weight: 300;
+    font-weight: bold;
+
+}
+
+h1 {
+    color: rgb(255, 255, 0); /* Change the heading color to yellow */
+    }
+
+table {
+    border-collapse: collapse;
+    width: 265px;
+    border: 5px solid rgb(238, 255, 0);
+    border-radius: 50px; /* Rounded corners */
+    }
+
+        /* Changed the border color for cells to black */
+td, th {
+    width: 150px;
+    height: 80px;
+    border: 1px solid black;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text within the cells */
+    padding: 8px;
+    }
+
+.orange-border {
+    border: 4px solid rgb(255, 191, 0);
+    }
+
+.bordered {
+    border-radius: 50px;
+}
+
+#assign_button{
+    background-color: black;
+    border-radius: 10px;
+    font-size: 30px;
+    border-color: #ffffff;
+    border-width:5px;
+    color: #eeff00;
+}
+
+#assign_button:hover{
+    cursor:pointer;
+}
+#text{
+    color: red;
+    font-size: 30px;
+
+
+}
+#modal_text{
+    color: #000000;
+    font-size: 20px;
+
+}
+.sumbitbtn{
+    background-color: black;
+    border-radius: 10px;
+    font-size: 15px;
+    border-color: #ffffff;
+    border-width:5px;
+    color: #eeff00;
+}
