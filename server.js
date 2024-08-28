@@ -41,8 +41,18 @@ app.get('/teachers/:name', (req, res) => {
     let loc_def = __dirname + '/database/default/' + req.params.name + '/tt.json';
     const tt_def = (JSON.parse(fs.readFileSync(loc_def)));
     // console.log(tt_def);
+    let data = {
+        'tt': tt_def,
+        'meta': {
+            'time': {
+                'hours': dt.getHours(),
+                'minutes': dt.getMinutes(),
+            },
+            'current_period': 'temp',
+        }
+    }
 
-    res.render('teachers.html', tt_def);
+    res.render('teachers.html', data);
 });
 
 const port = 3000
