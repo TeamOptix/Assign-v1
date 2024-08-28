@@ -1,13 +1,12 @@
-
 body {
     background-color: #232634;
     color: #ffffff;
- 
-    font-family: Tahoma, sans-serif;
-    }
 
-#title{
-    
+    font-family: Tahoma, sans-serif;
+}
+
+#title {
+
     font-size: 50px;
     color: #c6d0f5;
     font-family: Tahoma, sans-serif;
@@ -17,43 +16,50 @@ body {
 }
 
 h1 {
-    color: rgb(255, 255, 0); /* Change the heading color to yellow */
-    }
+    color: rgb(255, 255, 0);
+    /* Change the heading color to yellow */
+}
 
 table {
     width: 265px;
     border: 5px solid #e5c890;
-    border-collapse:separate;
-    }
+    border-collapse: separate;
+}
 
-td, th {
+td,
+th {
     width: 150px;
     height: 80px;
     border: 1px solid#81c8be;
-    border-radius: 2px; /* Rounded corners */
-    text-align: center; /* Center the text within the cells */
+    border-radius: 2px;
+    /* Rounded corners */
+    text-align: center;
+    /* Center the text within the cells */
     padding: 2px;
-    }
+}
 
 .orange-border {
     border: 1px solid#d8c59e;
     padding: 2px;
-    }
+}
 
 .bordered {
     border-radius: 3px;
 }
-#time{
+
+#time {
     margin-left: 1000px;
     margin-top: -65px;
 }
-.information{
+
+.information1 {
     position: absolute;
     font-variant: small-caps;
     color: #f2d5cf;
     font-size: 30px;
 }
-#period{
+
+#period {
     margin-top: -65px;
     margin-left: 300px;
 }
