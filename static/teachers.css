@@ -1,14 +1,13 @@
 body {
-    background-color: #000000;
+    background-color: #232634;
     color: #ffffff;
  
     font-family: Tahoma, sans-serif;
     }
 
 #title{
-    
-    font-size: 50px;
-    color: #eeff00;
+    font-size: 40px;
+    color: #c6d0f5;
     font-family: Tahoma, sans-serif;
     font-weight: 300;
     font-weight: bold;
@@ -20,58 +19,81 @@ h1 {
     }
 
 table {
-    border-collapse: collapse;
     width: 265px;
-    border: 5px solid rgb(238, 255, 0);
-    border-radius: 50px; /* Rounded corners */
+    border: 5px solid #e5c890;
+    border-collapse:separate;
     }
 
-        /* Changed the border color for cells to black */
 td, th {
     width: 150px;
-    height: 80px;
-    border: 1px solid black;
-    border-radius: 10px; /* Rounded corners */
+    height: 70px;
+    border: 1px solid#81c8be;
+    border-radius: 2px; /* Rounded corners */
     text-align: center; /* Center the text within the cells */
-    padding: 8px;
+    padding: 2px;
     }
 
 .orange-border {
-    border: 4px solid rgb(255, 191, 0);
+    border: 1px solid#d8c59e;
+    padding: 2px;
     }
 
 .bordered {
-    border-radius: 50px;
+    border-radius: 3px;
 }
 
 #assign_button{
-    background-color: black;
+    background-color: #babbf1;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 20px;
     border-color: #ffffff;
     border-width:5px;
-    color: #eeff00;
+    color: #303446;
 }
 
 #assign_button:hover{
     cursor:pointer;
 }
 #text{
-    color: red;
+    color: rgb(235, 96, 96);
     font-size: 30px;
 
 
 }
 #modal_text{
-    color: #000000;
+    color: #06104a;
     font-size: 20px;
 
 }
 .sumbitbtn{
-    background-color: black;
+    background-color: rgb(149, 206, 239);
     border-radius: 10px;
     font-size: 15px;
     border-color: #ffffff;
     border-width:5px;
-    color: #eeff00;
+    color: #0f2363;
 }
+#time{
+    margin-left: 1000px;
+    margin-top: -65px;
+}
+.information{
+    position: absolute;
+    font-variant: small-caps;
+    color: #f2d5cf;
+    font-size: 30px;
+}
+#period{
+    margin-top: -65px;
+    margin-left: 300px;
+}
+
+#title2{
+    font-size: 40px;
+    color: #858ca4;
+    font-family: Tahoma, sans-serif;
+    font-weight: 250;
+    
+
+}
+
