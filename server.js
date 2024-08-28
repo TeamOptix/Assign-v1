@@ -25,11 +25,11 @@ nunjucks.configure('templates', {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/templates/home.html');
+    res.render('home.html');
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/templates/login.html');
+    res.render('login.html');
 });
 
 app.post('/login', (req, res) => {
@@ -38,14 +38,11 @@ app.post('/login', (req, res) => {
 });
 
 app.get('/teachers/:name', (req, res) => {
-    res.send(req.params);
-    console.log(req.params.name);
-
     let loc_def = __dirname + '/database/default/' + req.params.name + '/tt.json';
-    const tt_def = (JSON.parse(fs.readFileSync(loc_def))).monday;
+    const tt_def = (JSON.parse(fs.readFileSync(loc_def)));
     console.log(tt_def);
 
-    // res.render('')
+    res.render('teachers.html', tt_def);
 });
 
 const port = 3000

@@ -1,6 +1,6 @@
 
 body {
-    background-color: #000000;
+    background-color: #232634;
     color: #ffffff;
  
     font-family: Tahoma, sans-serif;
@@ -9,7 +9,7 @@ body {
 #title{
     
     font-size: 50px;
-    color: #eeff00;
+    color: #c6d0f5;
     font-family: Tahoma, sans-serif;
     font-weight: 300;
     font-weight: bold;
@@ -21,27 +21,44 @@ h1 {
     }
 
 table {
-    border-collapse: collapse;
+  
     width: 265px;
-    border: 5px solid rgb(238, 255, 0);
-    border-radius: 50px; /* Rounded corners */
+    border: 5px solid #e5c890;
+ 
+    border-collapse:separate;
+    
+    
     }
 
         /* Changed the border color for cells to black */
 td, th {
     width: 150px;
     height: 80px;
-    border: 1px solid black;
-    border-radius: 10px; /* Rounded corners */
+    border: 1px solid#81c8be;
+    border-radius: 2px; /* Rounded corners */
     text-align: center; /* Center the text within the cells */
-    padding: 8px;
+    padding: 2px;
     }
 
 .orange-border {
-    border: 4px solid rgb(255, 191, 0);
+    border: 1px solid#d8c59e;
+    padding: 2px;
     }
 
 .bordered {
-    border-radius: 50px;
+    border-radius: 3px;
 }
-
+#time{
+    margin-left: 1000px;
+    margin-top: -65px;
+}
+.information{
+    position: absolute;
+    font-variant: small-caps;
+    color: #f2d5cf;
+    font-size: 30px;
+}
+#period{
+    margin-top: -65px;
+    margin-left: 300px;
+}
