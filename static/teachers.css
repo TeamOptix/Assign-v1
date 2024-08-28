@@ -55,23 +55,23 @@ td, th {
     cursor:pointer;
 }
 #text{
-    color: red;
+    color: rgb(235, 96, 96);
     font-size: 30px;
 
 
 }
 #modal_text{
-    color: #000000;
+    color: #06104a;
     font-size: 20px;
 
 }
 .sumbitbtn{
-    background-color: black;
+    background-color: rgb(149, 206, 239);
     border-radius: 10px;
     font-size: 15px;
     border-color: #ffffff;
     border-width:5px;
-    color: #eeff00;
+    color: #0f2363;
 }
 #time{
     margin-left: 1000px;
@@ -87,3 +87,13 @@ td, th {
     margin-top: -65px;
     margin-left: 300px;
 }
+
+#title2{
+    font-size: 40px;
+    color: #858ca4;
+    font-family: Tahoma, sans-serif;
+    font-weight: 250;
+    
+
+}
+
