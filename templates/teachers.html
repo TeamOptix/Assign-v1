@@ -12,13 +12,12 @@
     <!-- Nunjucks -->
     <script src="https://mozilla.github.io/nunjucks/files/nunjucks.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/teachers.css">
+    <link rel="stylesheet" href="/static/teachers.css">
     <title>ASSIGN - Teachers Portal</title>  
 
 </head>
 
 <body>
-
 
     <center>
         <font size=200px>
@@ -26,6 +25,9 @@
             <h1 id="title">Teachers Portal</h1>
         </font>
     </center>
+<!--time display-->
+<div class="information" id="time">{{time.hours}}:{{time.minutes}}</div><div class="information" id="period">Current Period:X</div>
+<br>
 
     <!-- Carousel -->
     <div id="carouselsss" class="carousel slide" data-interval="false">
