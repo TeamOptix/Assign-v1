@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assign_teachers_style.css">
-    <title>ASSIGN-Teachers Portal</title>  
+    <link rel="stylesheet" href="/home.css">
+    <title>ASSIGN</title>  
 
 </head>
 
@@ -17,8 +17,8 @@
 
     <center>
         <font size=200px>
-                <h1 id="title">ASSIGN-Teachers Portal</h1>
-           </font>
+            <h1 id="title">ASSIGN</h1>
+        </font>
     </center>
     <!--
     <center>
@@ -57,10 +57,16 @@
 
 -->
     <!-- Carousel -->
-    <div id="carouselsss" class="carousel slide"  data-interval="false">
+    <div id="carouselsss" class="carousel slide" data-bs-ride="carousel">
 
         <!-- Indicators/dots -->
-        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselsss" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselsss" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselsss" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselsss" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carouselsss" data-bs-slide-to="4"></button>
+        </div>
 
         <!-- The slideshow/carousel -->
         <div class="carousel-inner">
@@ -267,31 +273,8 @@
             <button class="carousel-control-next" type="button" data-bs-target="#carouselsss" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </button>
-            </div></center>
-            <br>
-            <span></span>
-
-<center><button id="assign_button" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#areyousure">Assign Substitution</button></center>
-  <!-- confirmation popup -->
-  <div class="modal fade" id="areyousure" tabindex="-1" aria-labelledby="text" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="text">Confirmation</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <h4 id="modal_text">Are you sure you want to Assign Substitution?</h4>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary sumbitbtn" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary sumbitbtn">Assign</button>
-        </div>
-      </div>
-    </div>
-  </div>    
-
-        
+        </center>
 </body>
 
 </html>

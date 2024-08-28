@@ -25,11 +25,16 @@ nunjucks.configure('templates', {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/templates/assign_home.html');
+    res.sendFile(__dirname + '/templates/home.html');
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/templates/assign_login.html');
+    res.sendFile(__dirname + '/templates/login.html');
+});
+
+app.post('/login', (req, res) => {
+    let username = ((req.body.username).replace(/\s+/g, '')).toLowerCase();
+    res.redirect('/teachers/' + username);
 });
 
 app.get('/teachers/:name', (req, res) => {
@@ -41,12 +46,6 @@ app.get('/teachers/:name', (req, res) => {
     console.log(tt_def);
 
     // res.render('')
-});
-
-app.post('/login', (req, res) => {
-    let username = req.body.username;
-    let password = req.body.password;
-    res.send(`Username: ${username} Password: ${password}`);
 });
 
 const port = 3000
