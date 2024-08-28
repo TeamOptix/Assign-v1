@@ -25,7 +25,16 @@ nunjucks.configure('templates', {
 });
 
 app.get('/', (req, res) => {
-    res.render('home.html');
+    let data = {
+        'meta': {
+            'time': {
+                'hours': dt.getHours(),
+                'minutes': dt.getMinutes(),
+            },
+            'current_period': 'temp',
+        }
+    }
+    res.render('home.html', data);
 });
 
 app.get('/login', (req, res) => {
