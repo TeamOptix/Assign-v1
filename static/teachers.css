@@ -1,5 +1,5 @@
 body {
-    background-color: #181825	;
+    background-color: #181825;
     color: #ffffff;
     font-family: Tahoma, sans-serif;
 }
@@ -16,8 +16,8 @@ h1 {
     color: rgb(255, 255, 0);
 }
 
-h2{
-    font-size:27px;
+h2 {
+    font-size: 27px;
     color: #f9c69a;
 }
 
@@ -56,6 +56,19 @@ th {
 }
 
 #assign_button:hover {
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #babbf1;
+    border-radius: 10px;
+    font-size: 20px;
+    border-color: #ffffff;
+    border-width: 5px;
+    color: #303446;
+}
+
+.btn:hover {
     cursor: pointer;
 }
 
