@@ -12,7 +12,6 @@ const dt = new Date();
 const full_date = (dt.getDate() + '-' + (dt.getMonth() + 1) + '-' + dt.getFullYear()).toString();
 
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-let day = days[dt.getDay() - 1];
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('static'));
@@ -76,12 +75,23 @@ function get_current_period(hour_minute) {
     }
 }
 
+function get_time() {
+    let day = days[dt.getDay() - 1];
+    let hours = dt.getHours();
+    let minutes = dt.getMinutes();
+    if (hours < 10) { hours = '0' + hours.toString(); }
+    if (minutes < 10) { minutes = '0' + minutes.toString(); }
+
+    return ({ 'day': day, 'hours': hours, 'minutes': minutes });
+}
+
 app.get('/', (req, res) => {
     let data = {
         'meta': {
             'time': {
-                'hours': dt.getHours(),
-                'minutes': dt.getMinutes(),
+                'day': get_time().day,
+                'hours': get_time().hours,
+                'minutes': get_time().minutes,
             },
             'current_period': get_current_period(null),
         }
@@ -101,13 +111,13 @@ app.post('/login', (req, res) => {
 app.get('/teachers/:name', (req, res) => {
     let loc_def = __dirname + '/database/default/' + req.params.name + '/tt.json';
     const tt_def = (JSON.parse(fs.readFileSync(loc_def)));
-    // console.log(tt_def);
     let data = {
         'tt': tt_def,
         'meta': {
             'time': {
-                'hours': dt.getHours(),
-                'minutes': dt.getMinutes(),
+                'day': get_time().day,
+                'hours': get_time().hours,
+                'minutes': get_time().minutes,
             },
             'current_period': get_current_period(null),
         }
