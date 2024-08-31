@@ -24,6 +24,58 @@ nunjucks.configure('templates', {
     express: app
 });
 
+function get_current_period(hour_minute) {
+    if (hour_minute == null) {
+        hour_minute = dt.getHours().toString() + dt.getMinutes().toString();
+    }
+    if (dt.getDay() == 7) { return 'None'; }
+    // TODO: Add exceptions for days where a test is scheduled...handle user input for if fridays(or others) are tests
+    else {
+        if (hour_minute >= 1445 || hour_minute <= 745) { return 'None'; }
+        else {
+            if (hour_minute >= 750 && hour_minute < 800) {
+                return 'Prayer/Soul Time';
+            }
+            else if (hour_minute >= 800 && hour_minute < 835) {
+                return 'First';
+            }
+            else if (hour_minute >= 835 && hour_minute < 850) {
+                return 'Break';
+            }
+            else if (hour_minute >= 800 && hour_minute < 930) {
+                return 'Second';
+            }
+            else if (hour_minute >= 930 && hour_minute < 1005) {
+                return 'Third';
+            }
+            else if (hour_minute >= 1005 && hour_minute < 1040) {
+                return 'Fourth';
+            }
+            else if (hour_minute >= 1040 && hour_minute < 1115) {
+                return 'Fifth';
+            }
+            else if (hour_minute >= 1115 && hour_minute < 1150) {
+                return 'Sixth';
+            }
+            else if (hour_minute >= 1150 && hour_minute < 1220) {
+                return 'Lunch';
+            }
+            else if (hour_minute >= 1220 && hour_minute < 1300) {
+                return 'Seventh';
+            }
+            else if (hour_minute >= 1300 && hour_minute < 1335) {
+                return 'Eight';
+            }
+            else if (hour_minute >= 1335 && hour_minute < 1410) {
+                return 'Ninth';
+            }
+            else if (hour_minute >= 1410 && hour_minute < 1445) {
+                return 'Dispersal';
+            }
+        }
+    }
+}
+
 app.get('/', (req, res) => {
     let data = {
         'meta': {
@@ -31,7 +83,7 @@ app.get('/', (req, res) => {
                 'hours': dt.getHours(),
                 'minutes': dt.getMinutes(),
             },
-            'current_period': 'temp',
+            'current_period': get_current_period(null),
         }
     }
     res.render('home.html', data);
@@ -57,7 +109,7 @@ app.get('/teachers/:name', (req, res) => {
                 'hours': dt.getHours(),
                 'minutes': dt.getMinutes(),
             },
-            'current_period': 'temp',
+            'current_period': get_current_period(null),
         }
     }
 
