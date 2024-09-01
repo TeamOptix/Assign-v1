@@ -68,8 +68,21 @@ th {
     color: #303446;
 }
 
+
 .btn:hover {
     cursor: pointer;
+    text-decoration: none;
+    background-color: #babbf1;
+    border-radius: 10px;
+    font-size: 20px;
+    border-color: #ffffff;
+    border-width: 5px;
+    color: #303446;
+}
+
+
+a{
+    text-decoration: none;
 }
 
 #text {
