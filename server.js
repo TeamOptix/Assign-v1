@@ -77,12 +77,13 @@ function get_current_period(hour_minute) {
 
 function get_time() {
     let day = days[dt.getDay() - 1];
+    let day_of_week = dt.getDay();
     let hours = dt.getHours();
     let minutes = dt.getMinutes();
     if (hours < 10) { hours = '0' + hours.toString(); }
     if (minutes < 10) { minutes = '0' + minutes.toString(); }
 
-    return ({ 'day': day, 'hours': hours, 'minutes': minutes });
+    return ({ 'day': day, 'day_w': day_of_week, 'hours': hours, 'minutes': minutes });
 }
 
 app.get('/', (req, res) => {
@@ -112,7 +113,14 @@ app.get('/teachers/:name', (req, res) => {
     let loc_def = __dirname + '/database/default/' + req.params.name + '/tt.json';
     const tt_def = (JSON.parse(fs.readFileSync(loc_def)));
     let data = {
-        'tt': tt_def,
+        // 'tt': tt_def,
+        'tt': {
+            'day1': tt_def.monday,
+            'day2': tt_def.tuesday,
+            'day3': tt_def.wednesday,
+            'day4': tt_def.thursday,
+            'day5': tt_def.friday,
+        },
         'meta': {
             'time': {
                 'day': get_time().day,
